@@ -1,0 +1,86 @@
+$side-padding-left: 20px;
+
+@media #{$small-up} {
+
+	.side {
+		float: left;
+		height: 100%;
+		margin-left: -250px;
+		width: 250px;
+		background-color: #4E5050;
+		transition: .2s all ease;
+		color: #FFFFFF;
+	}
+
+	.side .cont-top {
+		background-color: #848484;
+	}
+
+	.side .cont-top .login-ident {
+		height: 100%;
+		padding: 18px 0 0 95px;
+		background: url('/img/user-icon.png') 20px 13px no-repeat;
+	}
+
+	.side .cont-top .login-ident .user {
+		font-size: 1.6em;
+		margin-bottom: 5px;
+	}
+
+	.side nav {
+		padding: 20px 0;
+	}
+
+	.side h5 {
+		font-family: 'Montserrat', 'Raleway', Helvetica, Arial, sans-serif;
+		text-transform: uppercase;
+		color: #FFFFFF;
+		font-weight: 400;
+		font-size: 1em;
+		padding-left: $side-padding-left;
+	}
+
+	.side .side-nav li {
+		margin: 0 0 0.2em;
+	}
+
+	.side .side-nav li a {
+		transition: .2s all ease;
+	}
+
+	.side .side-nav li a i {
+		margin-right: 15px;
+		font-size: 16px;
+	}
+
+	.side .side-nav li > a {
+		color: #BABABA;
+		font-size: 1.2em;
+		padding: 5px;
+		padding-left: $side-padding-left;
+	}
+
+	.side .side-nav li.active > a:first-child:not(.button) {
+		border-left: 2px solid red;
+		color: #FFFFFF;
+		background-color: #54595A;
+	}
+
+	.side .side-nav li a:not(.button):hover {
+		color: #FFFFFF;
+	}
+
+	.side input {
+		margin: 0 $side-padding-left;
+		width: 210px;
+		border: none;
+		background: #54595A;
+		padding: 5px 15px;
+	}
+}
+
+@media #{$large-up} {
+	.side {
+		margin-left: 0;
+	}
+}

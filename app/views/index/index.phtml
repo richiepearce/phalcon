@@ -1,0 +1,79 @@
+<!doctype html>
+<html class="no-js" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Foundation</title>
+    <link rel="stylesheet" href="css/app.css" />
+    <link rel="stylesheet" href="css/icons/foundation-icons.css" />
+    <script src="bower_components/modernizr/modernizr.js"></script>
+  </head>
+  <body>
+
+
+    <div class="side">
+      <div class="cont-top">
+        <div class="login-ident">
+          <div class="user">Guest</div>
+          <div class="status">Not logged in</div>
+        </div>
+      </div>
+      <nav>
+        <h5>Navigation</h5>
+        <ul class="side-nav">
+          <li><a href="/"><i class="fi-home"></i>Homepage</a></li>
+          <li class="active"><a href="/"><i class="fi-play-circle"></i>Supercars</a></li>
+          <li><a href="/"><i class="fi-marker"></i>About us</a></li>
+          <li><a href="/"><i class="fi-pencil"></i>Blog</a></li>
+          <li><a href="/"><i class="fi-info"></i>Knowledgebase</a></li>
+          <li><a href="/"><i class="fi-comments"></i>Support forums</a></li>
+        </ul>
+
+        <h5>Accounts</h5>
+        <ul class="side-nav">
+          <li><a href="/"><i class="fi-torso"></i>Register</a></li>
+          <li><a href="/"><i class="fi-lock"></i>Login</a></li>
+        </ul>
+
+        <h5>Search</h5>
+        <input type="text" name="" placeholder="Example..." />
+      </nav>
+    </div>
+
+    <div class="content-wrapper">
+      <div class="cont-top">
+        <div class="row">
+          <div class="small-2 columns"><a href="javascript:;" class="nav-toggle">togg</a></div>
+          <div class="small-4 small-offset-6 columns">
+            <div class="logo">LOGO</div>
+          </div>
+        </div>
+      </div>
+      <div class="content-std">
+        <div class="content-inner">
+            <h1>Supercars</h1>
+            <h2>A selection of interesting supercars</h2>
+        </div>
+      </div>
+      <div class="content-prod">
+        <div class="row">
+          <?php foreach ($random_cars as $car): ?>
+            <div class="medium-4 columns centered">
+              <div class="product">
+                <img src="<?= $car->image ?>" />
+                <p class="name"><?= $car->name ?></p>
+                <p class="desc"><?= $car->desc ?></p>
+              </div>
+            </div> 
+          <?php endforeach; ?>
+        </div>
+      </div>
+    </div>
+
+    
+
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/foundation/js/foundation.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>
